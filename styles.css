@@ -1,0 +1,380 @@
+/* start of general css */
+
+#page-container{
+    position: relative;
+    min-height: 100%;
+}
+#wrapper{
+    padding-bottom: 75px;
+}
+body{
+    margin: 0 auto;
+    background-color: #F2D0C4;
+}
+header{
+    background-color: #F2AA6B;
+    margin-top: 0;
+    padding-top: 20px;
+    padding-left: 20px;
+    height: 250px;
+}
+h1{
+    font-family: hegante, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    color: #8C4842;
+    font-size: 48px;
+    text-shadow: 2px 2px #ebe5e7;
+}
+header img{
+    margin-left: 110px;
+    width: auto;
+    height: auto;
+}
+nav{
+    float: right;
+    margin: 10px;
+}
+nav li{
+    display: inline;
+}
+nav a{
+    display: inline-block;
+    background-color: #FCE196;
+    color: #8C4842;
+    padding: 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 22px;
+    margin: 5px;
+    width: 130px;
+    border-radius: 10px;
+    border: 0.25px solid ;
+    box-shadow: 2px 2px 1px #ebe5e7;
+}
+a:link{
+    text-decoration: none;
+}
+nav a:hover{
+    background-color: #E0BCB7;
+    opacity: 50%;
+}
+ul li{
+   list-style-type: none;
+}
+h2{
+    font-family: quiche-sans, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #40282E;
+    font-size: 28px;
+    text-align: center;
+    padding-top: 16px;
+}
+p{
+    font-family: brother-1816, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 2.5em;
+    text-align: center;
+    font-size: 20px;
+}
+.p_safety{
+    margin-left: 120px;
+    margin-right: 120px;
+    font-size: 18px;
+}
+.p_safety1{
+    text-align: left;
+    line-height: 1.5em;
+    margin-left: 40px;
+    font-size: 16px;
+}
+.quote{
+    font-style: italic;
+    font-size: 16px;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10px;
+    margin: 10px;
+}
+.social img{
+    padding: 10px;
+}
+h4{
+    display: none;
+}
+
+/* end of general css */
+/* start of index css */
+
+.flexcontainerone{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.flexitemone, .flexitemtwo{
+    flex-basis: 40%;
+    text-align: center;
+    padding: 15px;
+}
+.flexitemthree, .flexitemfour{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+}
+.friesText {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+.indexform{
+    width: 550px;
+    height: 580px;
+    text-align: center;
+}
+#guess1{
+    margin: 0 auto;
+    width: 100px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.indexform #mybutton{
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+/* end of index css */
+/* start of galleries css */
+
+.gallery-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+.item{
+    justify-content: center;
+    margin: 0 auto;
+    padding: 25px;
+    clip-path:circle(250px at center);
+}
+a:hover img{
+    opacity: 50%;
+}
+.item1{
+    margin-right: 20px;
+}
+.item2{
+    margin-left: 75px;
+}
+.item3{
+    margin-right: 45px;
+}
+.item4{
+    margin-left: 30px;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #8C4842;
+}
+.item:hover .overlay {
+    opacity: 1;
+}
+
+/* end of galleries css */
+/* start of submit yours css */
+
+form {
+    width: 400px;
+    height: 420px;
+    background-color: #f1c49d;
+    margin: 0 auto;
+    border-radius: 16px;
+    padding: 10px;
+    padding-left: 30px;
+    margin-top: 20px;
+    }
+label, legend {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    }
+span{
+    font-size: 32px;
+    padding: 16px;
+    text-align: center;
+}
+fieldset{
+    border: #FCE196 2px;
+}
+#myName{
+    margin-top: 10px;
+    height: 20px;
+}
+#myEmail{
+    height: 20px;
+}
+input {
+    display: block;
+    width: 350px;
+    height: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 2px inset rgb(230, 179, 179);
+    margin-top: 10px;
+}
+textarea{
+    display: block;
+    width: 350px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 2px inset rgb(230, 179, 179);
+    margin-top: 10px;
+}
+#myFile{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 12px;
+    width: 330px;
+}
+#mybutton{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    background-color: #8C4842;
+    color: white;
+    padding: 10px;
+    margin-top: 40px;
+    text-align: center;
+    width: 150px;
+    height: 50px;
+}
+#mybutton:hover{
+    opacity: 50%;
+}
+
+/* end of submit yours css */
+/* start of store css */
+
+.store-sec{
+    text-align: center;
+    padding: 50px;
+}
+h3{
+    font-family: quiche-sans, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #40282E;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 16px;
+}
+#storeform {
+    width: 900px;
+    height: 575px;
+    background-color: #f1c49d;
+    margin: 0 auto;
+    border-radius: 16px;
+    padding: 10px;
+    padding-left: 30px;
+    margin-top: 20px;
+}
+#storeform input{
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 2px inset rgb(230, 179, 179);
+    float: left;   
+    clear: left;
+    margin: 20px;
+}
+#storeform label{
+    float: left;
+    padding: 18px;
+}
+
+#storeform #totalOutput {
+    float: left;
+    display: block;
+    margin: 20px;
+    margin-bottom: 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+}
+#storeform #mybutton{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    background-color: #8C4842;
+    color: white;
+    padding: 10px;
+    margin-top: 40px;
+    text-align:center;
+    width: 150px;
+    height: 50px;
+}
+
+/* end of about us css */
+/* media queries */
+@media only screen and (max-width : 320px){
+    h1{
+        font-size: 24px;
+        text-align: left;
+    }
+    header{
+        height: 110px;
+        width: 100%;
+    }
+    header img{
+        height: 50px;
+        width: 50px;
+    }
+    nav{
+       clear:both; 
+       display: block;
+    }
+    p{
+        line-height: 1em;
+        margin: 0 auto;
+        font-size: 16px;
+    }
+    .p_safety{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .flexcontainerone{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .flexitemone, .flexitemtwo{
+        width: 300px; 
+    }
+    .flexitemone{
+        margin-top: 275px;
+    }
+}

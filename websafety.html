@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="author" content="Raina Patterson">
+	<meta name="description" content="Oh, So Fluffy! Explore cute animal pictures or submit some of your own.">
+    <title>Oh, So Fluffy!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/sew7his.css">
+    <script src="modernizr.05819.js"></script>
+    </head>
+
+    <body>
+        <div id="page-container">
+            <div id="wrapper">
+                <header>
+                    <h1>Oh, So Fluffy!</h1>
+                    <img src="paw.png" alt="Paw Logo">
+                    <nav>
+                        <h4>Nav</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="galleries.html">Galleries</a></li>
+                            <li><a href="submityours.html">Submit Yours</a></li>
+                            <li><a href="store.html">Store</a></li>
+                            <li><a href="websafety.html">Web Safety</a></li>
+                        </ul>
+                    </nav>
+                </header>
+
+                <main>
+                    <h2>Let's Talk About Web Safety!</h2>
+                    <h3>What can we find out easily?</h3>
+                    <p class="p_safety1"></p>
+                    <p class="p_safety1"></p>
+                    <p class="p_safety1"></p>
+                    <p class="p_safety1"></p>
+                    <p class="p_safety1"></p>
+                    <p class="p_safety1"></p>
+                    <h3>Keep your browser software up-to-date</h3>
+                    <p class="p_safety">Newer browsers protect your computer better and make sure you are safe from any suspicious scams or viruses. Updated browsers keep your computer more secure by targetting problems that may occur, like identity theft, spyware, and any sorts of malware. This link can help you see if your current browser is up-to-date. <a href="https://browser-update.org/update-browser.html">Check your browser status.</a></p>
+                    
+                    <h3>Use HTTPS</h3>
+                    <p class="p_safety">HTTPS means Hypertext Transfer Protocol <strong>Secure</strong>. You want to make sure that you see the &quot;S&quot; before you enter any personal information! Here is a link discussing the importance of HTTPS sites. <a href="https://www.cloudflare.com/learning/ssl/why-use-https/">Why HTTPS?</a></p>
+                    
+                    <h3>Don't resue passwords</h3>
+                    <p class="p_safety">A great example I read in this attached link is,</p>
+                    <blockquote cite="https://www.comparitech.com/password-managers/password-security/">
+                        <p class="quote">&quot;It's as if you had multiple houses and used the same lock and key for all of them. If you were to lose your keys, all of your houses would be vulnerable.&quot;</p>
+                    </blockquote>
+                    <p class="p_safety">Making sure that you change your passwords at least every 90 days can help you keep your accounts secure and ensure safety. Using different passwords can help make you less vulnerable to any vitrual theft. <a href="https://www.comparitech.com/password-managers/password-security/">More on why you should never reuse the same passwords</a>.</p>
+                </main>
+            </div>
+            <!-- closes wrapper -->
+                <footer>
+                    <div class="social">
+                        <a href="#"><img src="twitter.icon.png" alt="Icon for Twitter.com"></a>
+                        <a href="#"><img src="instagram.icon.png" alt="Icon for Instagram"></a>
+                        <a href="#"><img src="youtube.icon.png" alt="Icon for Youtube"></a>
+                        <a href="#"><img src="pinterest.icon.png" alt="Icon for Pinterest"></a>
+                    </div>
+                    <div class="small">
+                        <small>&copy; 2021. This website is for educational purposes only. Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></small>
+                    </div>
+                </footer>
+            </div>
+            <!-- closes page-container -->
+            <script>
+                "use strict";
+                //Declares that the code will be in strict mode
+                //these next lines are pulling code by tehir tag names, since they are all p tags it will pull them in their order, starting at 0
+                //Uses the naviagtor object to obtain info about the current browser
+                document.getElementsByTagName("p")[0].innerHTML = "Web Browser Name: " + navigator.appName;
+                document.getElementsByTagName("p")[1].innerHTML = "Web Browser Version: " + navigator.appVersion;
+                document.getElementsByTagName("p")[2].innerHTML = "Operating Platform : " + navigator.platform;
+                document.getElementsByTagName("p")[3].innerHTML = "User Agent : " + navigator.userAgent;
+                document.getElementsByTagName("p")[4].innerHTML = "Current Location: " + navigator.geolocation;
+                document.getElementsByTagName("p")[5].innerHTML = "Network Connection: " + navigator.onLine;
+            </script>
+        </body>
+    </html>

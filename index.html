@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="author" content="Raina Patterson">
+	<meta name="description" content="Oh, So Fluffy! Explore cute animal pictures or submit some of your own.">
+    <title>Oh, So Fluffy!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/sew7his.css">
+    <script src="modernizr.05819.js"></script>
+    </head>
+
+    <body>
+        <div id="page-container">
+            <div id="wrapper">
+                <header>
+                    <h1>Oh, So Fluffy!</h1>
+                    <img src="paw.png" alt="Paw Logo">
+                    <nav>
+                        <h4>Nav</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="galleries.html">Galleries</a></li>
+                            <li><a href="submityours.html">Submit Yours</a></li>
+                            <li><a href="store.html">Store</a></li>
+                            <li><a href="websafety.html">Web Safety</a></li>
+                        </ul>
+                    </nav>
+                </header>
+                
+                <main class="flexcontainerone">
+                    <section class="flexitemone">
+                        <h2>Brighten Up Your Day</h2>
+                        <p>We all need a little pick-me-up every now and then, so why not look at cute fluffies to help? Enjoying some cuteness overload can really put a smile on your face! Scroll through our galleries of cute animals and feel better-hoperfully!</p>
+                    </section>
+                    <section class="flexitemtwo">
+                        <h2>Share The Love</h2>
+                        <p>Don't keep all this cuteness to yourself! Share the love with friends, family, co-workers, archnemeses, your pets, or even the mail-person. Whoever it be, let them join the fun too!</p>
+                    </section>
+                    <section class="flexitemthree">
+                        <h3 class="friesText">Click this puppy to give him fries</h3>
+                        <!-- Calling on the changeImage function to change the dog from sad to happy & back -->
+                        <img id="fry_dog" onclick="changeImage()" src="sad_puppy.jpg" alt="A sad dog" height="500">
+                        <h3 class="friesText">Click again to take them away, you monster</h3>
+                    </section>
+                    <figure class="flexitemfour">
+                        <form class="indexform">
+                            <fieldset>
+                            <legend><span>Guessing Game</span></legend>
+                            <label for = "guess1">How many puppies are in this picture?</label>
+                            <input type="text" name="guess1" id="guess1">
+                            <img src="guessgame1.jpg" alt="puppies lined up in a  row" width=450>
+                            <input id="mybutton" type="button" value="Submit" onclick="guessingGame()">
+                            <p id="gg_results"></p>
+                            </fieldset>
+                        </form>
+                    </figure>
+                </main>
+            </div>
+            <!-- closes wrapper -->
+            <footer>
+                <div class="social">
+                    <a href="#"><img src="twitter.icon.png" alt="Icon for Twitter.com"></a>
+                    <a href="#"><img src="instagram.icon.png" alt="Icon for Instagram"></a>
+                    <a href="#"><img src="youtube.icon.png" alt="Icon for Youtube"></a>
+                    <a href="#"><img src="pinterest.icon.png" alt="Icon for Pinterest"></a>
+                </div>
+                <div class="small">
+                    <small>&copy; 2021. This website is for educational purposes only. Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></small>
+                </div>
+            </footer>
+        </div>
+        <!-- closes page-container -->
+        <!-- open Java Script -->
+        <script>
+            // script for changing image
+            function changeImage(){
+                // selects #fry_dog
+                var image = document.getElementById("fry_dog");
+                // if the file name has "happy" then the image will change to sad_puppy.jpg and if it does not, then it will change to happy_puppy.jpg
+                if (image.src.match("happy")) {
+                    image.src = "sad_puppy.jpg";
+                } else {
+                    image.src = "happy_puppy.jpg";
+                }
+            }
+    
+            // script for form
+            function guessingGame() {
+                const message = document.getElementById("gg_results");
+                message.innerHTML = "";
+                let x = document.getElementById("guess1").value;
+                try {
+                    if(x == "") throw "Enter a guess!";
+                    if(isNaN(x)) throw "Try a number!";
+                    x = Number(x);
+                    if(x<7) 
+                        message.innerHTML = "A little higher!";
+                    if(x>7) 
+                        message.innerHTML = "A little lower!";
+                    if(x==7) 
+                        message.innerHTML = "Wow! Great job!";
+                }
+                catch(err) {
+                    message.innerHTML ="Oh! " + err;
+                }
+                finally {
+                    document.getElementById(guess1).value="";
+                }
+            }
+             /* I used a try-catch statement to make sure that when the user enters in a value, depending on what is input, the output would alert the user. If the user inputs nothing or something that is not a number, it will display an error letting them know to input a number. I also made is so that if the user enters a number less than or greater than the actual answer, they will receive a message letting them know. I used my inspector to help me see what mistakes I was making while creating my code, so that I could fix them and have the correct outputs display. I noticed that I needed to fiddle around with making my throws and message.innerHTML's follow proper coding rules. Since "not a number" or an empty submission would technically be invalid, I used throw for errors and message.innerHTML for numerical values that are technically not errors. */
+         </script>
+    </body>
+</html>
